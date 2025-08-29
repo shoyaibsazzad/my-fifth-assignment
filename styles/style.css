@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  padding: 15px 30px;
+  background-color: whit;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  color: #006747;
+}
+.banner {
+  background: linear-gradient(90deg, #006633, #008844);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 4px solid #004d26;
+}
+.banner h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.cards-container {
+  
+}
+.cards{
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
