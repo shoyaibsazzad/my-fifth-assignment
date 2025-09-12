@@ -21,10 +21,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 m-0">
     <!-- navbar -->
 
-    <nav class="flex justify-between items-center bg-white">
+    <nav class="flex justify-between items-center bg-white px-3 py-3">
       <div class="flex items-center gap-2">
         <img src="./assets/logo.png" class="w-15 h-15" />
         <span class="font-bold text-[#006747] text-lg"
@@ -40,8 +40,8 @@
         <div class="flex items-center gap-2 bg-emerald-100 rounded-xl">
           <span id="coinCount">100</span>🪙
         </div>
-        <div class="flex items-center">
-          <button class="bg-green-400 rounded-xl">
+        <div class="flex items-center gap-2">
+          <button id="btnCopyDisplay" class="bg-green-500 text-white rounded-xl">
             <span id="copyCount">0</span>Copy
           </button>
         </div>
@@ -76,7 +76,7 @@
         <div class="w-60 bg-white rounded-md shadow-md p-4">
           <div class="flex justify-between items-center">
             <img src="./assets/emergency.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">
@@ -86,11 +86,13 @@
             <p class="text-black font-bold text-lg">999</p>
             <p class="bg-gray-300 inline-block rounded-lg">All</p>
           </div>
-          <div class="flex justify-between">
-            <button class="bg-white">
+          <div class="flex justify-between mt-2">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="999"
+>
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="National Emergency Number"
+      data-number="999">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -100,7 +102,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/police.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">Police Helpline Number</h2>
@@ -109,10 +111,12 @@
             <p class="bg-gray-300 inline-block rounded-lg">Police</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="999"
+>
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Police Helpline Number"
+      data-number="999">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -123,7 +127,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/fire-service.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">Fire Service Number</h2>
@@ -132,10 +136,12 @@
             <p class="bg-gray-300 inline-block rounded-lg">All</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="999"
+>
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Fire Service Number"
+      data-number="999">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -146,7 +152,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/ambulance.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">Ambulance Service</h2>
@@ -155,10 +161,12 @@
             <p class="bg-gray-300 inline-block rounded-lg">Health</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200"data-number="1994-999999"
+>
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Ambulance Service"
+      data-number="1994-999999">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -169,7 +177,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/emergency.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">Women & Child Helpline</h2>
@@ -178,10 +186,11 @@
             <p class="bg-gray-300 inline-block rounded-lg">Help</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="109">
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Women & Child Helpline"
+      data-number="109">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -191,7 +200,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/emergency.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">
@@ -202,10 +211,11 @@
             <p class="bg-gray-300 inline-block rounded-lg">Govt.</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="106">
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Anti-Corruption Helpline"
+      data-number="106">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -216,7 +226,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/emergency.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">Electricity Helpline</h2>
@@ -225,10 +235,11 @@
             <p class="bg-gray-300 inline-block rounded-lg">Electricity</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="16216">
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Electricity Helpline"
+      data-number="16216">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -239,7 +250,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/brac.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart heart-icon cursor-pointer"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">Brac Helpline</h2>
@@ -248,10 +259,11 @@
             <p class="bg-gray-300 inline-block rounded-lg">NGO</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="16445">
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Brac Helpline"
+      data-number="16445">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -262,7 +274,7 @@
         <div class="w-60 bg-white rounded-md shadow-md">
           <div class="flex justify-between items-center">
             <img src="./assets/Bangladesh-Railway.png" class="w-9" />
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-heart cursor-pointer heart-icon"></i></span>
           </div>
           <div class="">
             <h2 class="text-black font-bold text-lg">
@@ -273,10 +285,12 @@
             <p class="bg-gray-300 inline-block rounded-lg">Travle</p>
           </div>
           <div class="flex justify-between">
-            <button class="bg-white">
+            <button class="copy-btn px-2 rounded bg-slate-200" data-number="163">
+            
               <i class="fa-regular fa-copy"></i>Copy
             </button>
-            <button class="bg-green-500">
+            <button class="call-btn bg-green-500 text-white rounded" data-name="Brac Helpline"
+      data-number="16445">
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
@@ -302,5 +316,10 @@
         </div>
       </aside>
     </section>
+
+
+    <!-- script js -->
+
+    <script src="./script.js"></script>
   </body>
 </html>
